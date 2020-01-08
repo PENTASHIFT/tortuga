@@ -1,0 +1,45 @@
+doctype html
+html
+head
+  title Tortuga Radio
+  link(type="text/css" rel="stylesheet" href="/static/style.css")
+body
+  ul
+    li
+      a(href="/" class="active") Home
+    li
+      a(href="/about") About
+    li
+      a(href="") Store
+    li
+      a(href="") F.A.Q
+    form(action="/search_query" enctype="multipart/form-data")
+      input(type="text" name="search" id="search" placeholder="Search...")
+  
+  h3
+    u Recent Uploads
+  
+  for results in data
+    div(id="featured")
+      a(href="/files/#{results.filename}") #{results.title}
+        br
+        br
+        audio(controls)
+          source(src="/uploads/#{results.filename}")
+        
+  br
+  br
+  br
+  form(action="/upload" method="POST" enctype="multipart/form-data" class="content")
+      input(type="text" name="title" class="textinput" maxlength="70" placeholder="Title" required)
+      br
+      textarea(name="description" id="description" class="textinput" cols="40" rows="5" placeholder="Describe your content" required)
+      br
+      label(class="custom-button") Upload
+        input(type="file" name="upload" style="display:none;" required)
+      label(class="custom-button") Submit
+          input(type="submit" style="display:none;")
+    
+  div(id="footer")
+    p
+      | No Mods, No Masters.

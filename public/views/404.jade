@@ -1,0 +1,24 @@
+doctype html
+html
+head
+  title Tortuga Radio
+  link(type="text/css" rel="stylesheet" href="/static/style.css")
+body
+  ul
+    li
+      a(href="/" class="active") Home
+    li
+      a(href="/about") About
+    li
+      a(href="") Store
+    li
+      a(href="") F.A.Q
+    form(action="/search_query" enctype="multipart/form-data")
+      input(type="text" name="search" id="search" placeholder="Search...")
+    
+  h2
+    b
+      |404 Not found. ¯\_(ツ)_/¯
+  footer
+    p(id="footer")
+      | No Mods, No Masters.

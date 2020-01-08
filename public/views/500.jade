@@ -1,0 +1,28 @@
+doctype html
+html
+head
+  title Tortuga Radio
+  link(type="text/css" rel="stylesheet" href="/static/style.css")
+body
+  ul
+    li
+      a(href="/" class="active") Home
+    li
+      a(href="/about") About
+    li
+      a(href="") Store
+    li
+      a(href="") F.A.Q
+    form(action="/search_query" enctype="multipart/form-data")
+      input(type="text" name="search" id="search" placeholder="Search...")
+    
+  h2 500 Internal Server Error
+  br
+  -var n = 0
+  while n++ < 20
+    p
+      b
+        | CONDUCTOR WE HAVE A PROBLEM
+  footer
+    p(id="footer")
+      | No Mods, No Masters.

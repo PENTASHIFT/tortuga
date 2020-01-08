@@ -1,0 +1,26 @@
+doctype html
+html
+head
+  title Tortuga Radio
+  link(type="text/css" rel="stylesheet" href="/static/style.css")
+body
+  ul
+    li
+      a(href="/" class="active") Home
+    li
+      a(href="/about") About
+    li
+      a(href="") Store
+    li
+      a(href="") F.A.Q
+    form(action="/search_query" enctype="multipart/form-data")
+      input(type="text" name="search" id="search" placeholder="Search...")
+  
+  for data in results
+    a(href="/files/#{data.filename}" class="results")
+      h2 #{data.title}
+      p #{data.description}
+      br
+  footer
+    p(id="footer")
+      | No Mods, No Masters.

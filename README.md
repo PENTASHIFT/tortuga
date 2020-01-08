@@ -1,2 +1,2 @@
-# tortuga.tv
+# tortuga
 No Mods, No Masters.

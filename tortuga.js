@@ -1,7 +1,3 @@
-// TODO :: Fix frontend footer so text is always centered.
-// TODO :: Put previews to the 10 most recent uploads on homepage.
-// TODO :: Make search results look not like shit.
-
 const express = require('express');
 const pgp = require('pg-promise')();
 const multer = require('multer');
